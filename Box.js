@@ -4,16 +4,21 @@ class Box {
         'restitution':0.8,
         'friction':1.0,
         'density':20,
-        'isStatic':false
+
+         //'isStatic': true,
+         'isStatic': false,
+         //'isStatic': true,
+        // 'isStatic': false,
+
     }
     this.body = Bodies.rectangle(x, y, width, height, options);
     this.width = width;
     this.height = height;
-    
+
     World.add(world, this.body);
   }
   display(){
-    var pos =this.body.position;
+    var pos = this.body.position;
     var angle = this.body.angle;
     push();
     translate(pos.x, pos.y);
